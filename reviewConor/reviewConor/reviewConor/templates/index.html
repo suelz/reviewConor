@@ -1,0 +1,40 @@
+
+
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="form">
+    <div id="desktop">
+        <img src="static/review.png" alt="Review Conor" style="max-with:100%" />
+    </div>
+
+    <div id="mobile">
+        <h1>REVIEW CONOR</h1>
+        <p style="font-size: 2px;">i look better on desktop</p>
+    </div>
+</div>
+
+<div class="form">
+    <form method="POST" action="/" class="center">
+        <textarea name="review" required cols="25" rows="5">don't be mean</textarea>
+        <br />
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+<div class="reviews">
+    {% for review in reviews %}
+    <br />
+    "
+    {{review.review}}
+    "
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
